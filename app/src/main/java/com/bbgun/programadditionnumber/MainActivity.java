@@ -16,10 +16,10 @@ public class MainActivity extends AppCompatActivity {
 
     private Button btnCal ;
 
-    TextView resultSum;
+    private TextView resultSum;
 
-    TextView minValue;
-    TextView maxValue;
+    private TextView minValue;
+    private TextView maxValue;
 
 
     @Override
