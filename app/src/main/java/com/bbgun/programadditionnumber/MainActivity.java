@@ -70,14 +70,8 @@ public class MainActivity extends AppCompatActivity {
     private void  calMinNumber(int number1 , int number2){
         minValue = (TextView) findViewById(R.id.minValue);
 
-        int min = 0 ;
+        int min = Math.min(number1 , number2) ;
 
-        if(number1 < number2){
-            min = number1;
-        }
-        if(number2 < number1){
-            min = number2;
-        }
 
         minValue.append(Integer.toString(min));
     }
@@ -85,14 +79,7 @@ public class MainActivity extends AppCompatActivity {
     private void  calMaxNumber(int number1 , int number2){
         maxValue = (TextView) findViewById(R.id.maxValue);
 
-        int max = 0 ;
-
-        if(number1 > number2){
-            max = number1;
-        }
-        if(number2 > number1){
-            max = number2;
-        }
+        int max = Math.max(number1 , number2) ;
 
         maxValue.append(Integer.toString(max));
     }
