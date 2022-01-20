@@ -50,8 +50,8 @@ public class MainActivity extends AppCompatActivity {
                     return;
                 }
 
-                int number1 = Integer.parseInt(text1);
-                int number2 = Integer.parseInt(text2);
+                float number1 =   Float.parseFloat(text1);
+                float number2 =  Float.parseFloat(text2);
 
                 resultSumCal(number1 , number2);
                 calMinNumber(number1 , number2);
@@ -61,26 +61,26 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    private void resultSumCal(int number1 , int number2){
+    private void resultSumCal(float number1 , float number2){
         resultSum = (TextView) findViewById(R.id.resultSum);
 
-        resultSum.append(Integer.toString(number1 + number2));
+        resultSum.setText(Float.toString(number1 + number2));
     }
 
-    private void  calMinNumber(int number1 , int number2){
+    private void  calMinNumber(float number1 , float number2){
         minValue = (TextView) findViewById(R.id.minValue);
 
-        int min = Math.min(number1 , number2) ;
+        float min = Math.min(number1 , number2) ;
 
 
-        minValue.append(Integer.toString(min));
+        minValue.setText(Float.toString(min));
     }
 
-    private void  calMaxNumber(int number1 , int number2){
+    private void  calMaxNumber(float number1 , float number2){
         maxValue = (TextView) findViewById(R.id.maxValue);
 
-        int max = Math.max(number1 , number2) ;
+        float max = Math.max(number1 , number2) ;
 
-        maxValue.append(Integer.toString(max));
+        maxValue.setText(Float.toString(max));
     }
 }
