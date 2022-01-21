@@ -1,3 +1,8 @@
+/**
+ * นายกิตติศักดิ์ ปานเหลือ
+ * 6206021621082
+ * */
+
 package com.bbgun.programadditionnumber;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -70,8 +75,9 @@ public class MainActivity extends AppCompatActivity {
     private void  calMinNumber(float number1 , float number2){
         minValue = (TextView) findViewById(R.id.minValue);
 
-        float min = Math.min(number1 , number2) ;
-
+        float min = 0 ;
+        if(number1 < number2) min = number1;
+        else min = number2;
 
         minValue.setText(Float.toString(min));
     }
@@ -79,7 +85,9 @@ public class MainActivity extends AppCompatActivity {
     private void  calMaxNumber(float number1 , float number2){
         maxValue = (TextView) findViewById(R.id.maxValue);
 
-        float max = Math.max(number1 , number2) ;
+        float max = 0;
+        if(number1 > number2) max = number1;
+        else max = number2;
 
         maxValue.setText(Float.toString(max));
     }
