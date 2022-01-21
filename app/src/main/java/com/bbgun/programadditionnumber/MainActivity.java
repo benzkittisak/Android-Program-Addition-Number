@@ -43,8 +43,6 @@ public class MainActivity extends AppCompatActivity {
                 String text1 = num1.getText().toString();
                 String text2 = num2.getText().toString();
 
-
-
                 if(text1.matches("")){
                     Toast.makeText(MainActivity.this , "Number 1 is Empty" , Toast.LENGTH_LONG).show();
                     return;
